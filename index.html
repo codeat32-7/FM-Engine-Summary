@@ -3,176 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FM Engine | The WhatsApp-First CMMS</title>
+    <title>FM Engine | WhatsApp-First CMMS</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({ 
-            startOnLoad: true, 
-            theme: 'base',
-            themeVariables: {
-                primaryColor: '#0d9488',
-                edgeColor: '#64748b',
-                fontFamily: 'Inter, sans-serif'
-            }
-        });
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .workflow-arrow { @apply hidden lg:block text-slate-300 text-3xl self-center; }
+        .gradient-text { background: linear-gradient(90deg, #2dd4bf, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
 
-    <header class="hero-gradient text-white py-24 px-6 relative overflow-hidden">
-        <div class="max-w-6xl mx-auto relative z-10 text-center">
-            <h1 class="text-7xl font-black mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">
-                FM Engine
+    <header class="min-h-[80vh] flex items-center justify-center bg-slate-900 text-white px-6 py-20 relative">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#2dd4bf 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="inline-block px-4 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-bold mb-6">NEXT-GEN FACILITY MANAGEMENT</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-8 tracking-tighter">
+                FM <span class="gradient-text">ENGINE</span>
             </h1>
-            <p class="text-2xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Bridging the Gap Between Residents and Facility Management[cite: 4]. 
-                <span class="text-teal-400 font-bold italic">The best interface is the one your users already use. [cite: 57]</span>
+            <p class="text-lg md:text-2xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+                A "WhatsApp-First" CMMS designed to bridge the gap between residents and management through Zero-Training interfaces.
             </p>
-            <a href="https://www.fmengine.space/" class="bg-teal-500 hover:bg-teal-600 text-white font-black py-5 px-12 rounded-full transition-all hover:scale-105 shadow-[0_0_20px_rgba(20,184,166,0.4)]">
-                LAUNCH LIVE DASHBOARD <i class="fas fa-arrow-right ml-2"></i>
-            </a>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="https://www.fmengine.space/" class="w-full sm:w-auto bg-teal-500 hover:bg-teal-400 text-slate-900 font-extrabold py-5 px-10 rounded-2xl transition-all shadow-xl shadow-teal-500/20">
+                    OPEN LIVE PLATFORM <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+            </div>
         </div>
     </header>
 
-    <section class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-12 gap-16 items-center">
-            <div class="md:col-span-5">
-                <h2 class="text-4xl font-black mb-6 text-slate-900 leading-tight">Solving "The Maintenance Friction" [cite: 5]</h2>
-                <p class="text-lg text-slate-600 mb-8">Traditional CMMS fail because they require new apps and login credentials[cite: 58]. FM Engine solves this by turning WhatsApp into a professional reporting tool[cite: 11].</p>
-                <div class="space-y-4">
-                    <div class="flex items-start gap-4 p-4 bg-red-50 rounded-xl border border-red-100">
-                        <i class="fas fa-times-circle text-red-500 mt-1"></i>
-                        <p class="text-sm text-red-900"><strong>Resident Friction:</strong> Tenants refuse to download another app for a leaky faucet[cite: 7].</p>
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-8 text-slate-900">The Friction Gap.</h2>
+                <p class="text-slate-600 text-lg mb-10 leading-relaxed">
+                    Facility management often fails at the "Reporting" stage. Residents refuse to download proprietary apps for one-off requests, leading to lost data and broken trust.
+                </p>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm">
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-4 text-xl">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">No Extra Apps</h4>
+                        <p class="text-sm text-slate-500">Eliminates the barrier of entry for residents and staff alike.</p>
                     </div>
-                    <div class="flex items-start gap-4 p-4 bg-teal-50 rounded-xl border border-teal-100">
-                        <i class="fas fa-check-circle text-teal-600 mt-1"></i>
-                        <p class="text-sm text-teal-900"><strong>Zero Training:</strong> If you can send a text, you can use the system[cite: 13].</p>
+                    <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm">
+                        <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center mb-4 text-xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">WhatsApp-First</h4>
+                        <p class="text-sm text-slate-500">Leveraging the interface everyone already knows and uses daily.</p>
                     </div>
                 </div>
             </div>
-            <div class="md:col-span-7 bg-slate-100 p-8 rounded-3xl border border-slate-200 shadow-inner">
-                <h3 class="text-xl font-black mb-6">Current MVP Status [cite: 70]</h3>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-white p-4 rounded-xl border shadow-sm">
-                        <i class="fab fa-whatsapp text-2xl text-green-500 mb-2"></i>
-                        <p class="text-xs font-bold">WhatsApp Intake [cite: 74]</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-xl border shadow-sm">
-                        <i class="fas fa-brain text-2xl text-purple-500 mb-2"></i>
-                        <p class="text-xs font-bold">AI Auto-Triage [cite: 75]</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-xl border shadow-sm">
-                        <i class="fas fa-id-card text-2xl text-blue-500 mb-2"></i>
-                        <p class="text-xs font-bold">Identity Engine [cite: 77]</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-xl border shadow-sm">
-                        <i class="fas fa-bolt text-2xl text-orange-500 mb-2"></i>
-                        <p class="text-xs font-bold">Real-Time Sync [cite: 78]</p>
-                    </div>
-                </div>
+            <div class="bg-slate-900 p-8 md:p-12 rounded-[2rem] text-white">
+                <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                    <span class="w-2 h-8 bg-teal-500 rounded-full"></span> MVP Capabilities
+                </h3>
+                <ul class="space-y-6">
+                    <li class="flex items-center gap-4">
+                        <i class="fas fa-check text-teal-400"></i>
+                        <span><strong>Real-time Intake:</strong> Instant Twilio Webhook processing.</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <i class="fas fa-check text-teal-400"></i>
+                        <span><strong>Semantic Triage:</strong> Gemini-powered 3-word professional titles.</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <i class="fas fa-check text-teal-400"></i>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <i class="fas fa-check text-teal-400"></i>
+                        <span><strong>Identity Resolution:</strong> 5-step automated user verification.</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section class="bg-slate-50 py-24 border-y border-slate-200">
-        <div class="max-w-[1400px] mx-auto px-6">
-            <h2 class="text-4xl font-black mb-4 text-center">The Data Journey</h2>
-            <p class="text-center text-slate-500 mb-16 max-w-2xl mx-auto leading-relaxed">How a single WhatsApp message becomes an actionable work order in under 100ms[cite: 96].</p>
+    <section class="bg-slate-100 py-24 px-6 border-y border-slate-200">
+        <div class="max-w-[1440px] mx-auto">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-center">System Workflow</h2>
+            <p class="text-center text-slate-500 mb-20 max-w-2xl mx-auto">A seamless data journey from a simple text to a managed dashboard ticket.</p>
             
-            <div class="bg-white p-12 rounded-[40px] shadow-xl border border-slate-200 overflow-x-auto">
-                <div class="mermaid min-w-[1000px]">
-                    graph LR
-                        subgraph Resident_Interaction ["User Experience"]
-                            A[Scan QR in Lobby [cite: 35]] --> B[WhatsApp: 'Lift is stuck' [cite: 36]]
-                        end
-
-                        subgraph Processing_Layer ["Edge Intelligence"]
-                            B -->|POST Webhook| C[Vercel Edge Functions [cite: 29]]
-                            C --> D{Identity Resolution [cite: 60]}
-                            D -->|Normalize ID| E[Gemini 3 Flash AI [cite: 30]]
-                            E -->|Semantic Triage| F[Generate Work Order [cite: 117]]
-                        end
-
-                        subgraph Data_Layer ["Persistence & Broadcast"]
-                            F --> G[(Supabase DB [cite: 31])]
-                            G -->|Real-time Trigger| H[Admin Dashboard [cite: 78]]
-                        end
-
-                        style Resident_Interaction fill:#f0fdf4,stroke:#16a34a,stroke-width:2px
-                        style Processing_Layer fill:#f8fafc,stroke:#334155,stroke-width:2px
-                        style Data_Layer fill:#f5f3ff,stroke:#7c3aed,stroke-width:2px
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-2">
+                <div class="flex flex-col h-full">
+                    <div class="bg-white p-8 rounded-[2rem] border-2 border-slate-200 shadow-xl h-full flex flex-col items-center text-center">
+                        <div class="bg-green-500 w-16 h-16 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-lg shadow-green-200">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h4 class="font-extrabold text-xl mb-3">INGRESS</h4>
+                        <p class="text-slate-500 text-sm">Resident scans QR and sends unstructured WhatsApp text.</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12 text-center max-w-4xl mx-auto">
-                <div>
-                    <span class="text-3xl font-black text-teal-500">5-Step</span>
-                    <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mt-2">Identity Engine [cite: 61]</p>
+                <i class="fas fa-chevron-right workflow-arrow"></i>
+
+                <div class="flex flex-col h-full">
+                    <div class="bg-slate-900 p-8 rounded-[2rem] border-2 border-slate-800 shadow-xl h-full flex flex-col items-center text-center text-white">
+                        <div class="bg-teal-500 w-16 h-16 rounded-2xl flex items-center justify-center text-slate-900 text-2xl mb-6 shadow-lg shadow-teal-500/20">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="font-extrabold text-xl mb-3">IDENTITY</h4>
+                        <p class="text-slate-400 text-sm">5-Step resolution strips phone IDs and verifies Staff/Resident roles.</p>
+                    </div>
                 </div>
-                <div>
-                    <span class="text-3xl font-black text-teal-500">Stateless</span>
-                    <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mt-2">Elastic Execution [cite: 135]</p>
+                <i class="fas fa-chevron-right workflow-arrow"></i>
+
+                <div class="flex flex-col h-full">
+                    <div class="bg-white p-8 rounded-[2rem] border-2 border-slate-200 shadow-xl h-full flex flex-col items-center text-center">
+                        <div class="bg-purple-600 w-16 h-16 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-lg shadow-purple-200">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4 class="font-extrabold text-xl mb-3">BRAIN</h4>
+                        <p class="text-slate-500 text-sm">Gemini 3 Flash performs semantic triage and intent extraction.</p>
+                    </div>
                 </div>
-                <div>
-                    <span class="text-3xl font-black text-teal-500">&lt;100ms</span>
-                    <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mt-2">Global Latency [cite: 96]</p>
+                <i class="fas fa-chevron-right workflow-arrow"></i>
+
+                <div class="flex flex-col h-full">
+                    <div class="bg-white p-8 rounded-[2rem] border-2 border-slate-200 shadow-xl h-full flex flex-col items-center text-center">
+                        <div class="bg-indigo-600 w-16 h-16 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-lg shadow-indigo-200">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4 class="font-extrabold text-xl mb-3">STORAGE</h4>
+                        <p class="text-slate-500 text-sm">PostgreSQL persistence with Row-Level Security isolation.</p>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right workflow-arrow"></i>
+
+                <div class="flex flex-col h-full">
+                    <div class="bg-teal-500 p-8 rounded-[2rem] shadow-xl h-full flex flex-col items-center text-center text-slate-900">
+                        <div class="bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center text-slate-900 text-2xl mb-6">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h4 class="font-extrabold text-xl mb-3">BROADCAST</h4>
+                        <p class="text-slate-900/70 text-sm font-semibold">Real-time update pushed to the Admin Dashboard in <100ms.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 max-w-5xl mx-auto">
-        <h2 class="text-4xl font-black mb-16 text-center italic">Strategic Implementation Roadmap [cite: 55]</h2>
-        <div class="space-y-12">
-            <div class="flex flex-col md:flex-row gap-8 items-center bg-white p-8 rounded-3xl shadow-lg border border-slate-100 hover:border-teal-400 transition-colors">
-                <div class="bg-teal-100 text-teal-700 px-6 py-4 rounded-2xl font-black text-xl">Q2 2025</div>
-                <div>
-                    <h4 class="text-2xl font-bold mb-2">Professionalization [cite: 83]</h4>
-                    <p class="text-slate-600">Asset QR Tagging to pre-fill WhatsApp messages and AI vision to analyze photo severity [cite: 84-86].</p>
-                </div>
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-black mb-16">High-Performance Stack.</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="p-8 bg-white border border-slate-200 rounded-3xl">
+                <p class="text-xs font-bold text-teal-600 uppercase mb-2">Frontend</p>
+                <h4 class="text-xl font-extrabold">React 19</h4>
+                <p class="text-sm text-slate-500 mt-2">Utilizing the latest concurrent rendering features.</p>
             </div>
-            <div class="flex flex-col md:flex-row gap-8 items-center opacity-60 bg-slate-50 p-8 rounded-3xl border border-slate-200">
-                <div class="bg-slate-200 text-slate-500 px-6 py-4 rounded-2xl font-black text-xl">Q3 2025</div>
-                <div>
-                    <h4 class="text-2xl font-bold mb-2">Automation & Scaling [cite: 88]</h4>
-                    <p class="text-slate-600">Automated vendor dispatch for specific trades and a Multi-Language Engine for real-time translation[cite: 89, 91].</p>
-                </div>
+            <div class="p-8 bg-white border border-slate-200 rounded-3xl">
+                <p class="text-xs font-bold text-teal-600 uppercase mb-2">Compute</p>
+                <h4 class="text-xl font-extrabold">Vercel Edge</h4>
+                <p class="text-sm text-slate-500 mt-2">Zero cold starts. Sub-100ms processing globally.</p>
             </div>
-            <div class="flex flex-col md:flex-row gap-8 items-center opacity-40 bg-slate-50 p-8 rounded-3xl border border-slate-200">
-                <div class="bg-slate-200 text-slate-500 px-6 py-4 rounded-2xl font-black text-xl">Q4 2025</div>
-                <div>
-                    <h4 class="text-2xl font-bold mb-2">Intelligence [cite: 92]</h4>
-                    <p class="text-slate-600">Predictive analytics for asset failure and utility tracking via smart meter integration [cite: 93-94].</p>
+            <div class="p-8 bg-white border border-slate-200 rounded-3xl">
+                <p class="text-xs font-bold text-teal-600 uppercase mb-2">Database</p>
+                <h4 class="text-xl font-extrabold">Supabase</h4>
+                <p class="text-sm text-slate-500 mt-2">PostgreSQL with RLS and real-time triggers.</p>
+            </div>
+            <div class="p-8 bg-white border border-slate-200 rounded-3xl">
+                <p class="text-xs font-bold text-teal-600 uppercase mb-2">Intelligence</p>
+                <h4 class="text-xl font-extrabold">Gemini 3 Flash</h4>
+                <p class="text-sm text-slate-500 mt-2">High-speed reasoning for chat summarization.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-slate-900 text-white rounded-t-[3rem]">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black mb-16 text-center">Strategic Roadmap</h2>
+            <div class="space-y-12">
+                <div class="flex gap-8 group">
+                    <div class="text-teal-500 font-bold text-xl pt-1">2025 Q2</div>
+                    <div class="pb-12 border-l border-slate-700 pl-8 group-last:border-0">
+                        <h4 class="text-2xl font-bold mb-2">Professionalization</h4>
+                        <p class="text-slate-400">Asset QR tagging and AI-powered visual analysis of photos/videos.</p>
+                    </div>
+                </div>
+                <div class="flex gap-8 group">
+                    <div class="text-slate-600 font-bold text-xl pt-1">2025 Q3</div>
+                    <div class="pb-12 border-l border-slate-700 pl-8 group-last:border-0">
+                        <h4 class="text-2xl font-bold mb-2">Automation</h4>
+                        <p class="text-slate-500 leading-relaxed">Automated vendor dispatch and a real-time Multi-Language engine (Resident Hindi/Tamil → Admin English).</p>
+                    </div>
+                </div>
+                <div class="flex gap-8 group">
+                    <div class="text-slate-600 font-bold text-xl pt-1">2025 Q4</div>
+                    <div class="pb-0 pl-8">
+                        <h4 class="text-2xl font-bold mb-2">Intelligence</h4>
+                        <p class="text-slate-500 leading-relaxed">Predictive analytics for asset failure and smart utility tracking integration.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white py-16 px-6 text-center border-t-8 border-teal-500">
-        <h3 class="text-2xl font-black mb-4">Built for Performance. Engineered for Simplicity. [cite: 141]</h3>
-        <p class="text-slate-400 mb-8">Modernizing Facility Management, One Message at a Time[cite: 100].</p>
-        <div class="flex justify-center gap-8 mb-8">
-            <div class="text-center">
-                <p class="text-xs font-bold text-teal-500 uppercase">Frontend</p>
-                <p class="text-sm">React 19 [cite: 32]</p>
-            </div>
-            <div class="text-center border-x border-slate-700 px-8">
-                <p class="text-xs font-bold text-teal-500 uppercase">Backend</p>
-                <p class="text-sm">Vercel Edge [cite: 113]</p>
-            </div>
-            <div class="text-center">
-                <p class="text-xs font-bold text-teal-500 uppercase">Database</p>
-                <p class="text-sm">Supabase [cite: 109]</p>
-            </div>
-        </div>
-        <a href="https://www.fmengine.space/" class="text-teal-400 font-bold hover:underline">VISIT PRODUCTION URL</a>
+    <footer class="bg-white py-12 px-6 text-center border-t border-slate-100">
+        <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-4">Developed by the FM Engine Team</p>
+        <a href="https://www.fmengine.space/" class="text-teal-600 font-black text-xl hover:text-teal-500 transition-colors">FMENGINE.SPACE</a>
     </footer>
 
 </body>
